@@ -3,6 +3,8 @@
 Traitement de données de marché en Python. Exercices réalisés en septembre 2026
 dans le cadre d'une préparation à l'alternance en gestion d'actifs.
 
+![Performance cumulée de 3 ETF STOXX Europe 600, base 100](images/base100.png)
+
 ## Notebooks
 
 | Fichier | Contenu |
