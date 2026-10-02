@@ -15,7 +15,7 @@ dans le cadre d'une préparation à l'alternance en gestion d'actifs.
 | `04_comparaison_etf_europe.ipynb` | Trois ETF STOXX Europe 600 comparés en base 100 — l'écart de performance confronté à l'écart de frais |
 | `05_indicateurs_risque.ipynb` | Volatilité et rendement annualisés, distribution des rendements, maximum drawdown des 3 ETF |
 
-Les notebooks 01 à 03 n'utilisent que la bibliothèque standard. Le notebook 04 introduit pandas et yfinance, le notebook 05 matplotlib.
+Les notebooks 01 à 03 n'utilisent que la bibliothèque standard. Le notebook 04 introduit pandas, yfinance et matplotlib, le notebook 05 approfondit matplotlib.
 
 ![Performance cumulée et drawdown de 3 ETF STOXX Europe 600](images/drawdown.png)
 
@@ -36,7 +36,6 @@ mise en base 100, graphique de performance cumulée.
 
 ## Environnement
 
-Python 3. Les notebooks 01 à 03 s'exécutent sans installation. Le notebook 04
-requiert `pandas`, `yfinance` et `matplotlib`.
+Python 3. Les notebooks 01 à 03 s'exécutent sans installation. Les notebooks 04 et 05 requièrent `pandas`, `matplotlib` et, pour le 04, `yfinance`.
 
 Tous utilisent des chemins relatifs et s'exécutent tels quels après clonage du dépôt.
