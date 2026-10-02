@@ -17,6 +17,8 @@ dans le cadre d'une préparation à l'alternance en gestion d'actifs.
 
 Les notebooks 01 à 03 n'utilisent que la bibliothèque standard. Le notebook 04 introduit pandas et yfinance, le notebook 05 matplotlib.
 
+![Performance cumulée et drawdown de 3 ETF STOXX Europe 600](images/drawdown.png)
+
 ## Données
 
 `data/aapl_us_d.csv` — historique quotidien Apple depuis 1984 (source : stooq.com).
