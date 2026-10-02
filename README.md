@@ -13,9 +13,9 @@ dans le cadre d'une préparation à l'alternance en gestion d'actifs.
 | `02_rendements_par_titre.ipynb` | Rendements par titre sur un fichier multi-valeurs, tickers découverts à la lecture |
 | `03_lecture_csv_bourse.ipynb` | Lecture d'un historique CSV réel, gestion des données manquantes |
 | `04_comparaison_etf_europe.ipynb` | Trois ETF STOXX Europe 600 comparés en base 100 — l'écart de performance confronté à l'écart de frais |
+| `05_indicateurs_risque.ipynb` | Volatilité et rendement annualisés, distribution des rendements, maximum drawdown des 3 ETF |
 
-Les notebooks 01 à 03 n'utilisent que la bibliothèque standard. Le notebook 04
-introduit pandas, yfinance et matplotlib.
+Les notebooks 01 à 03 n'utilisent que la bibliothèque standard. Le notebook 04 introduit pandas et yfinance, le notebook 05 matplotlib.
 
 ## Données
 
