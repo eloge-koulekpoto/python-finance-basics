@@ -14,6 +14,7 @@ dans le cadre d'une préparation à l'alternance en gestion d'actifs.
 | `03_lecture_csv_bourse.ipynb` | Lecture d'un historique CSV réel, gestion des données manquantes |
 | `04_comparaison_etf_europe.ipynb` | Trois ETF STOXX Europe 600 comparés en base 100 — l'écart de performance confronté à l'écart de frais |
 | `05_indicateurs_risque.ipynb` | Volatilité et rendement annualisés, distribution des rendements, maximum drawdown des 3 ETF |
+| `06_sharpe_correlations.ipynb` | Ratio de Sharpe sous trois hypothèses de taux, corrélations entre fonds, apport d'une classe obligataire |
 
 Les notebooks 01 à 03 n'utilisent que la bibliothèque standard. Le notebook 04 introduit pandas, yfinance et matplotlib, le notebook 05 approfondit matplotlib.
 
@@ -25,6 +26,7 @@ Les notebooks 01 à 03 n'utilisent que la bibliothèque standard. Le notebook 04
 `data/prix.txt` et `data/cotations.txt` — fichiers d'exercice, format `date;prix` et `ticker;date;prix`.
 `data/etf_europe.csv` — cours de clôture ajustés de MEUD.PA, ETZ.PA et EXSA.DE,
 téléchargés via yfinance le 25 septembre 2026.
+`data/actions_obligations.csv` — les trois ETF actions et IEGA.AS (iShares Core € Govt Bond), 659 séances communes.
 
 ## Notions travaillées
 
@@ -36,6 +38,6 @@ mise en base 100, graphique de performance cumulée.
 
 ## Environnement
 
-Python 3. Les notebooks 01 à 03 s'exécutent sans installation. Les notebooks 04 et 05 requièrent `pandas`, `matplotlib` et, pour le 04, `yfinance`.
+Python 3. Les notebooks 01 à 03 s'exécutent sans installation. Les notebooks 04 et 05 requièrent `pandas`, `matplotlib` et, pour le 04, `yfinance`. Le notebook 06 requière `seaborn`
 
 Tous utilisent des chemins relatifs et s'exécutent tels quels après clonage du dépôt.
