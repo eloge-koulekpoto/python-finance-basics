@@ -1,7 +1,6 @@
 # Python finance basics
 
-Traitement de données de marché en Python. Exercices réalisés en septembre 2026
-dans le cadre d'une préparation à l'alternance en gestion d'actifs.
+Traitement de données de marché en Python. Exercices réalisés de septembre à octobre 2026 dans le cadre d'une préparation à l'alternance en gestion d'actifs.
 
 ![Performance cumulée de 3 ETF STOXX Europe 600, base 100](images/base100.png)
 
@@ -15,10 +14,12 @@ dans le cadre d'une préparation à l'alternance en gestion d'actifs.
 | `04_comparaison_etf_europe.ipynb` | Trois ETF STOXX Europe 600 comparés en base 100 — l'écart de performance confronté à l'écart de frais |
 | `05_indicateurs_risque.ipynb` | Volatilité et rendement annualisés, distribution des rendements, maximum drawdown des 3 ETF |
 | `06_sharpe_correlations.ipynb` | Ratio de Sharpe sous trois hypothèses de taux, corrélations entre fonds, apport d'une classe obligataire |
+| `07_portefeuille_60_40.ipynb` | Portefeuille 60/40 en buy and hold puis avec rééquilibrage trimestriel : dérive des poids et indicateurs comparés |
 
-Les notebooks 01 à 03 n'utilisent que la bibliothèque standard. Le notebook 04 introduit pandas, yfinance et matplotlib, le notebook 05 approfondit matplotlib, le notebook 06 ajoute seaborn.
+Les notebooks 01 à 03 n'utilisent que la bibliothèque standard. Le notebook 04 introduit pandas, yfinance et matplotlib, le notebook 05 approfondit matplotlib, le notebook 06 ajoute seaborn, le notebook 07 construit un portefeuille multi-actifs.
 
 ![Performance cumulée et drawdown de 3 ETF STOXX Europe 600](images/drawdown.png)
+![Part des actions dans un portefeuille 60/40, avec et sans rééquilibrage trimestriel](images/derive_poids.png)
 
 ## Données
 
@@ -38,8 +39,10 @@ mise en base 100, graphique de performance cumulée.
 
 Indicateurs de risque : volatilité annualisée, rendement annualisé (CAGR), maximum drawdown, ratio de Sharpe, matrice de corrélation, heatmap avec `seaborn`.
 
+Construction de portefeuille : allocation 60/40, dérive des poids en buy and hold, rééquilibrage trimestriel (`resample`, boucle par segments), fonction réutilisable de calcul d'indicateurs.
+
 ## Environnement
 
-Python 3. Les notebooks 01 à 03 s'exécutent sans installation. Les notebooks 04 et 05 requièrent `pandas`, `matplotlib` et, pour le 04, `yfinance`. Le notebook 06 requiert `seaborn`.
+Python 3. Les notebooks 01 à 03 s'exécutent sans installation. Les notebooks 04 et 05 requièrent `pandas`, `matplotlib` et, pour le 04, `yfinance`. Les notebooks 06 et 07 requièrent en plus `seaborn`.
 
 Tous utilisent des chemins relatifs et s'exécutent tels quels après clonage du dépôt.
