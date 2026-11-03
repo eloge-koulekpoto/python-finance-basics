@@ -15,6 +15,7 @@ Traitement de données de marché en Python. Exercices réalisés de septembre �
 | `05_indicateurs_risque.ipynb` | Volatilité et rendement annualisés, distribution des rendements, maximum drawdown des 3 ETF |
 | `06_sharpe_correlations.ipynb` | Ratio de Sharpe sous trois hypothèses de taux, corrélations entre fonds, apport d'une classe obligataire |
 | `07_portefeuille_60_40.ipynb` | Portefeuille 60/40 en buy and hold puis avec rééquilibrage trimestriel : dérive des poids et indicateurs comparés |
+| `08_frontiere_efficiente.ipynb` | Frontière efficiente des 4 ETF : GMV, MSR, équipondéré, position du 60/40 et fragilité du MSR aux estimations |
 
 Les notebooks 01 à 03 n'utilisent que la bibliothèque standard. Le notebook 04 introduit pandas, yfinance et matplotlib, le notebook 05 approfondit matplotlib, le notebook 06 ajoute seaborn, le notebook 07 construit un portefeuille multi-actifs.
 
