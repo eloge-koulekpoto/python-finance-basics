@@ -17,9 +17,9 @@ Traitement de données de marché en Python. Exercices réalisés de septembre �
 | `07_portefeuille_60_40.ipynb` | Portefeuille 60/40 en buy and hold puis avec rééquilibrage trimestriel : dérive des poids et indicateurs comparés |
 | `08_frontiere_efficiente.ipynb` | Frontière efficiente des 4 ETF : GMV, MSR, équipondéré, position du 60/40 et fragilité du MSR aux estimations |
 
-Les notebooks 01 à 03 n'utilisent que la bibliothèque standard. Le notebook 04 introduit pandas, yfinance et matplotlib, le notebook 05 approfondit matplotlib, le notebook 06 ajoute seaborn, le notebook 07 construit un portefeuille multi-actifs.
+Les notebooks 01 à 03 n'utilisent que la bibliothèque standard. Le notebook 04 introduit pandas, yfinance et matplotlib, le notebook 05 approfondit matplotlib, le notebook 06 ajoute seaborn, le notebook 07 construit un portefeuille multi-actifs, le notebook 08 ajoute l’optimisation avec SciPy.
 
-![Performance cumulée et drawdown de 3 ETF STOXX Europe 600](images/drawdown.png)
+![Frontière efficiente des 4 ETF, avec les portefeuilles GMV, MSR, équipondéré et 60/40](images/frontiere_efficiente.png)
 ![Part des actions dans un portefeuille 60/40, avec et sans rééquilibrage trimestriel](images/derive_poids.png)
 
 ## Données
@@ -42,8 +42,11 @@ Indicateurs de risque : volatilité annualisée, rendement annualisé (CAGR), ma
 
 Construction de portefeuille : allocation 60/40, dérive des poids en buy and hold, rééquilibrage trimestriel (`resample`, boucle par segments), fonction réutilisable de calcul d'indicateurs.
 
+Optimisation de portefeuille : frontière efficiente de Markowitz, portefeuilles de variance minimale (GMV) et de Sharpe maximal (MSR), optimisation sous contraintes avec `scipy.optimize`, sensibilité de l'allocation aux erreurs d'estimation.
+
 ## Environnement
 
-Python 3. Les notebooks 01 à 03 s'exécutent sans installation. Les notebooks 04 et 05 requièrent `pandas`, `matplotlib` et, pour le 04, `yfinance`. Les notebooks 06 et 07 requièrent en plus `seaborn`.
+Python 3. Les notebooks 01 à 03 s'exécutent sans installation. Les notebooks 04 et 05 requièrent `pandas`, `matplotlib` et, pour le 04, `yfinance`. Les notebooks 06 et 07 requièrent en plus `seaborn`.Le notebook 08 requiert en plus scipy.
 
 Tous utilisent des chemins relatifs et s'exécutent tels quels après clonage du dépôt.
+Les méthodes du notebook 08 s'appuient sur le cours *Introduction to Portfolio Construction and Analysis with Python* (EDHEC Business School, Coursera).
