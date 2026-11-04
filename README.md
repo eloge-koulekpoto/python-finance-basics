@@ -2,9 +2,9 @@
 
 *English version: [README.en.md](README.en.md)*
 
-Analyse de données de marché en Python, réalisée de septembre à novembre 2026 pour préparer une alternance en gestion d'actifs. Le dépôt contient un projet complet, huit notebooks d'apprentissage et un module de fonctions réutilisables.
+Analyse de données de marché en Python, réalisée de septembre à novembre 2026 pour préparer une alternance en gestion d'actifs. Le dépôt contient deux projets complets, les notebooks d'apprentissage et un module de fonctions réutilisables.
 
-## Projet
+## Projets
 
 ### [Trois ETF pour un même indice : lequel choisir ?](projets/projet1_etf_stoxx600.ipynb)
 
@@ -22,15 +22,24 @@ Trois ETF répliquent le STOXX Europe 600 : MEUD.PA (Amundi), EXSA.DE (iShares) 
 
 **Réponse :** MEUD.PA, pour un risque identique et les frais les plus bas. L'écart d'EXSA.DE vient presque entièrement de ses frais. Celui d'ETZ.PA, seul fonds à réplication synthétique, laisse 1,07 point inexpliqué, perdu de façon régulière : un coût de swap est l'hypothèse la plus plausible, que ces données ne suffisent pas à prouver.
 
+### [Faut-il rééquilibrer un portefeuille 60/40 ?](projets/projet2_portefeuille_60_40.ipynb)
+
+Un portefeuille 60 % actions (MEUD.PA) / 40 % obligations (IEGA.AS), laissé tel quel ou ramené à ses poids cibles chaque trimestre.
+
+![Part des actions dans un portefeuille 60/40, avec et sans rééquilibrage trimestriel](images/derive_poids.png)
+
+| | Performance cumulée | Rendement annualisé | Volatilité | Max drawdown | Sharpe (2 %) |
+|---|---|---|---|---|---|
+| Sans rééquilibrage | 24,93 % | 8,95 % | 8,95 % | −10,56 % | 0,78 |
+| Rééquilibrage trimestriel | 23,70 % | 8,53 % | 8,65 % | −10,29 % | 0,75 |
+
+**Réponse :** sans intervention, la part des actions monte à 67,6 % et le portefeuille devient plus risqué que prévu. Le rééquilibrage la maintient entre 57 % et 63 %, au prix de 0,42 point de rendement annualisé sur une période de hausse des actions. Placé sur la frontière efficiente des quatre ETF, le 60/40 est un choix de niveau de risque cohérent, plus robuste que le portefeuille optimisé.
+
 ## À voir aussi
 
 **[Frontière efficiente sur quatre ETF](apprentissage/08_frontiere_efficiente.ipynb).** Portefeuilles de variance minimale et de Sharpe maximal, position d'un 60/40. Une baisse de 0,5 point du rendement attendu d'un seul ETF suffit à faire basculer le portefeuille de Sharpe maximal de 90 % MEUD.PA à 100 % EXSA.DE.
 
 ![Frontière efficiente des 4 ETF, avec les portefeuilles GMV, MSR, équipondéré et 60/40](images/frontiere_efficiente.png)
-
-**[Portefeuille 60/40 avec et sans rééquilibrage](apprentissage/07_portefeuille_60_40.ipynb).** Dérive des poids en buy and hold face à un rééquilibrage trimestriel.
-
-![Part des actions dans un portefeuille 60/40, avec et sans rééquilibrage trimestriel](images/derive_poids.png)
 
 ## Notebooks d'apprentissage
 
@@ -42,10 +51,10 @@ Trois ETF répliquent le STOXX Europe 600 : MEUD.PA (Amundi), EXSA.DE (iShares) 
 | [04 – Comparaison de trois ETF](apprentissage/04_comparaison_etf_europe.ipynb) | Trois ETF STOXX Europe 600 comparés en base 100, écart de performance confronté à l'écart de frais |
 | [05 – Indicateurs de risque](apprentissage/05_indicateurs_risque.ipynb) | Volatilité et rendement annualisés, distribution des rendements, maximum drawdown |
 | [06 – Sharpe et corrélations](apprentissage/06_sharpe_correlations.ipynb) | Ratio de Sharpe sous trois hypothèses de taux, corrélations entre fonds, apport d'une classe obligataire |
-| [07 – Portefeuille 60/40](apprentissage/07_portefeuille_60_40.ipynb) | Buy and hold puis rééquilibrage trimestriel : dérive des poids et indicateurs comparés |
+| 07 – Portefeuille 60/40 | Devenu le [projet 2](projets/projet2_portefeuille_60_40.ipynb) |
 | [08 – Frontière efficiente](apprentissage/08_frontiere_efficiente.ipynb) | GMV, MSR, équipondéré, position du 60/40 et fragilité du MSR aux estimations |
 
-Les notebooks 01 à 03 n'utilisent que la bibliothèque standard. Le 04 introduit pandas, yfinance et matplotlib, le 05 approfondit matplotlib, le 06 ajoute seaborn, le 07 construit un portefeuille multi-actifs, le 08 ajoute l'optimisation avec SciPy.
+Les notebooks 01 à 03 n'utilisent que la bibliothèque standard. Le 04 introduit pandas, yfinance et matplotlib, le 05 approfondit matplotlib, le 06 ajoute seaborn, le 07, devenu le projet 2, construit un portefeuille multi-actifs, le 08 ajoute l'optimisation avec SciPy.
 
 ## Module `outils_portefeuille.py`
 
@@ -74,7 +83,7 @@ from outils_portefeuille import *
 
 ## Environnement
 
-Python 3 avec `pandas`, `matplotlib`, `seaborn` (06, 07), `scipy` (08 et module) et `yfinance` (04). Les notebooks 01 à 03 s'exécutent sans installation.
+Python 3 avec `pandas`, `matplotlib`, `seaborn` (06, projet 2), `scipy` (08 et module) et `yfinance` (04). Les notebooks 01 à 03 s'exécutent sans installation.
 
 Les chemins sont relatifs : chaque notebook s'exécute depuis son propre dossier après clonage du dépôt. Le notebook 04 retélécharge les données et réécrit `data/etf_europe.csv` ; ne le relancez pas si vous voulez retrouver les chiffres publiés.
 
